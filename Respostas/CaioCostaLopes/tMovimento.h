@@ -26,7 +26,7 @@ typedef struct tMovimento {
  * @param acao Ação gerada pelo movimento;
  * @return tMovimento* Ponteiro para a estrutura do tipo "tMovimento" que contém os campos de dados inicializados;
  */
-tMovimento *CriaMovimento(int numerodoMovimento, COMANDO comando, const char *acao);
+tMovimento *CriaMovimento(int numerodoMovimento, COMANDO comando, const char acao[]);
 
 /**
  * @brief Obtém o número do movimento;
