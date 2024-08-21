@@ -48,7 +48,7 @@ int ObtemColunaPosicao(tPosicao *posicao);
  * 
  * @param posicao Ponteiro para a estrutura do tipo "tPosicao" com seus dados atualizados;
  */
-void AtualizaPosicao(tPosicao *posicao);
+void AtualizaPosicao(tPosicao *posicaoAtual, tPosicao *posicaoNova);
 
 /**
  * @brief Verifica seduas posições são iguais;
