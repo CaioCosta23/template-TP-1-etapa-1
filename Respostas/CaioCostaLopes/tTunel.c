@@ -37,20 +37,19 @@ tTunel *CriaTunel(int linhaAcesso1, int colunaAcesso1, int linhaAcesso2, int col
 }
 
 bool EntrouTunel(tTunel *tunel, tPosicao *posicao) {
-    if (((ObtemLinhaPosicao(posicao) == (ObtemLinhaPosicao((*tunel).acesso1))) && (ObtemColunaPosicao(posicao) == (ObtemColunaPosicao((*tunel).acesso1)))) || 
-        (((ObtemLinhaPosicao(posicao) == (ObtemLinhaPosicao((*tunel).acesso2)))) && (ObtemColunaPosicao(posicao) == (ObtemColunaPosicao((*tunel).acesso2))))) {
-            return true;
+    if ((SaoIguaisPosicao(posicao, (*tunel).acesso1) || (SaoIguaisPosicao(posicao, (*tunel).acesso2)))) {
+        return true;
     }
     return false;
 }
 
 void LevaFinalTunel(tTunel *tunel, tPosicao *posicao) {
-    if (((ObtemLinhaPosicao(posicao) == (ObtemLinhaPosicao((*tunel).acesso1))) && (ObtemColunaPosicao(posicao) == (ObtemColunaPosicao((*tunel).acesso1))))) {
+    if (SaoIguaisPosicao(posicao, (*tunel).acesso1)) {
         AtualizaPosicao(posicao, (*tunel).acesso2);
     }else {
-            if (((ObtemLinhaPosicao(posicao) == (ObtemLinhaPosicao((*tunel).acesso2))) && (ObtemColunaPosicao(posicao) == (ObtemColunaPosicao((*tunel).acesso2))))) {
-                AtualizaPosicao(posicao, (*tunel).acesso1);
-            }
+        if (SaoIguaisPosicao(posicao, (*tunel).acesso2)) {
+            AtualizaPosicao(posicao, (*tunel).acesso1);
+        }
     }
 }
 
