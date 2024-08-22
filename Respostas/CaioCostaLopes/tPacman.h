@@ -60,12 +60,12 @@ tPacman *ClonaPacman(tPacman *pacman);
 /**
  * @brief Clona (lista do) histórico de movimentos significativos do Pacman;
  * 
- * @param pacma Ponteiro para a estrutura do tipo "tPacman" que contém os dados atualizados do pacman;
+ * @param pacman Ponteiro para a estrutura do tipo "tPacman" que contém os dados atualizados do pacman;
  * @return tMovimento** Ponteiro para a lista/vetor (outro ponteiro) de struturas do tipo "tMovimento" que contém os dados dos mobimentos (significativos) do pacman;
  * OBS: Copia (e aloca dinâmicamente) todas as estruturas (a lista e as estruturas individualmente - do tipo "tMovimento")
  * do histórico de movimentos significativos do Pacman (original, passado como parâmetro);
  */
-tMovimento **ClonaHistoricoDeMovimentosSignificativosPacman(tPacman *pacma);
+tMovimento **ClonaHistoricoDeMovimentosSignificativosPacman(tPacman *pacman);
 
 /**
  * @brief Obtém a posição do Pacman;
